@@ -1,0 +1,105 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	border: none;
+	border-collapse: collapse;
+}
+
+html,body {
+	color: #333333;
+	font: 14px/18px Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	min-width: 980px;
+	line-height: 16px;
+	width: 100%;
+}
+
+a{
+	text-decoration: none;
+	color: #333399;
+}
+
+a:HOVER {
+	outline: none;
+	color: #999999;
+}
+
+#wrapper {
+	margin: 0px auto;
+	width: 970px;
+	z-index: 1;
+	padding: 30px;
+}
+
+.forma {
+	margin: 0 auto;
+	width: 600px;
+	margin-top: 30px;
+}
+
+.forma input, .forma textarea {
+	display: block;
+	width: 100%;
+	margin-top: 20px;
+	border: 1px solid #CCCCCC;
+	box-shadow: 0px 0px 5px #CCCCCC inset;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.forma button {
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
+	border-radius: 5px;
+	padding: 5px 20px;
+	border-bottom: 2px solid #BCBCBC;
+	cursor: pointer;
+}
+
+
+.forma button:HOVER {
+	border: 0px;
+	border-top: 1px solid #BCBCBC;
+	border-bottom: 1px solid #BCBCBC;
+}
+
+.forma button:ACTIVE {
+	border: 0px;
+	border-top: 2px solid #BCBCBC;
+	outline: none;
+}
+
+#messages {
+	margin-top: 40px;
+}
+#messages table{
+	border-collapse: separate;
+	background-color: #FFFFFF;
+}
+
+#messages table tr{
+	background-color: #F0F0F0;
+}
+
+#messages table td, #messages table th{
+	padding: 3px;
+}
+
+#message {
+	padding: 20px;
+}
+
+#message h1{
+	font-size: 20px;
+}
+
+#message p{
+	font-weight: normal;
+	margin: 10px 0px;
+}
+
+#message span{
+	margin: 0px 10px 0 30px;
+	font-weight: bold;
+}
