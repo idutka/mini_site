@@ -25,16 +25,19 @@ a:HOVER {
 }
 
 #wrapper {
-	margin: 0px auto;
+	margin: 0 auto;
 	width: 970px;
 	z-index: 1;
 	padding: 30px;
 }
 
+#warning {
+	text-align: center;
+}
+
 .forma {
-	margin: 0 auto;
-	width: 600px;
-	margin-top: 30px;
+    width: 600px;
+    margin: 30px auto 0;
 }
 
 .forma input, .forma textarea {
@@ -42,30 +45,32 @@ a:HOVER {
 	width: 100%;
 	margin-top: 20px;
 	border: 1px solid #CCCCCC;
-	box-shadow: 0px 0px 5px #CCCCCC inset;
+	box-shadow: 0 0 5px #CCCCCC inset;
 	border-radius: 5px;
 	padding: 10px;
 }
 
 .forma button {
-	display: block;
-	margin: 0 auto;
-	margin-top: 20px;
-	border-radius: 5px;
-	padding: 5px 20px;
-	border-bottom: 2px solid #BCBCBC;
-	cursor: pointer;
+    margin: 20px auto 0;
 }
 
+.btn {
+	display: block;
+    border-radius: 5px;
+	padding: 5px 20px;
+	border-bottom: 2px solid #BCBCBC;
+	cursor: pointer;	
+	background-color: #DDDDDD; 
+}
 
-.forma button:HOVER {
-	border: 0px;
+.btn:HOVER {
+	border: 0;
 	border-top: 1px solid #BCBCBC;
 	border-bottom: 1px solid #BCBCBC;
 }
 
-.forma button:ACTIVE {
-	border: 0px;
+.btn:ACTIVE {
+	border: 0;
 	border-top: 2px solid #BCBCBC;
 	outline: none;
 }
@@ -73,17 +78,29 @@ a:HOVER {
 #messages {
 	margin-top: 40px;
 }
-#messages table{
-	border-collapse: separate;
-	background-color: #FFFFFF;
+
+#messages .mess{
+	border-radius: 10px;
+	box-shadow:0 0 5px #999999;
+	padding: 10px;
+	margin: 10px;
 }
 
-#messages table tr{
-	background-color: #F0F0F0;
+#messages p{
+	padding: 5px;
 }
 
-#messages table td, #messages table th{
-	padding: 3px;
+#messages span{
+	font-size: 12px;
+}
+
+.edit{
+	float: right;
+}
+
+.edit .btn{
+	float: right;
+	margin: -5px 10px;
 }
 
 #message {
@@ -96,10 +113,21 @@ a:HOVER {
 
 #message p{
 	font-weight: normal;
-	margin: 10px 0px;
+	padding: 10px 0;
+	border-bottom: 1px dotted #999999
 }
 
 #message span{
-	margin: 0px 10px 0 30px;
+	margin: 0 10px 0 30px;
 	font-weight: bold;
+}
+
+
+#menu a {
+	margin: 10px;
+}
+
+#menu a.active {
+	font-weight: bold;
+	color: #999999;
 }
