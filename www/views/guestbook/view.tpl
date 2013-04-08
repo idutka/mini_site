@@ -5,9 +5,11 @@
 	<p>
 		<span>Створено:</span><?php echo $this->replaceDate($m['date_create']); ?>
 		<span>Змінено:</span><?php echo $this->replaceDate($m['date_modified']); ?>
+                <?php if(!empty($_SESSION['id_group'])){ ?>
 			<span class="edit">
 				<a href='/guestbook/delete/<?php echo $m['id'];?>' class="btn">del</a>
 				<a href='/guestbook/edit/<?php echo $m['id'];?>' class="btn">edit</a>
 			</span>
+                <?php } ?>
 	</p>
 </div>

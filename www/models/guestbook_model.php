@@ -20,6 +20,24 @@ class GuestbookModel extends Model{
 		$this->connectDB();
 	}
 
+	/**
+     * parsePost
+     *
+     * Парсить та перевіряє на валідність дані передані $_POST запитом
+     *
+     * @param  array $p	дані передані $_POST запитом
+     * @return array
+     */
+	public function parsePost($p)
+	{
+		$message = array();
+			if(isset($p['id'])){$message['id'] = $p['id']*1;};
+			$message['name'] = $this->valid($p['title']);
+			$message['description'] = $this->valid($p['description']);
+			$message['text'] = $this->valid($p['text']);
+
+		return $message;
+	}
 
 	/**
      * getMessage
@@ -79,8 +97,9 @@ class GuestbookModel extends Model{
      * @param  array $m повідомлення
      * @return boolean
      */
-	public function addMessage($m)
+	public function addMessage($post)
 	{
+		$m = $this->parsePost($post);
 		$sql = "INSERT INTO `message` (`id`,`name`,`description`,`text`,`date_create`,`date_modified`) 
 				VALUES (NULL, '".$m['name']."', '".$m['description']."', '".$m['text']."', NOW(), NOW());";
 		mysql_query($sql);	
@@ -95,8 +114,9 @@ class GuestbookModel extends Model{
      * @param  array $m повідомлення
      * @return boolean
      */
-	public function editMassage($m)
+	public function editMassage($post)
 	{	
+		$m = $this->parsePost($post);
 		mysql_query("UPDATE `message` SET `name` = '".$m['name']."',`description` = '".$m['description']."',`text` = '".$m['text']."',`date_modified` = NOW() WHERE id = ".$m['id'].";");
 		return true;
 	}

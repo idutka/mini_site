@@ -43,11 +43,15 @@ a:HOVER {
 .forma input, .forma textarea {
 	display: block;
 	width: 100%;
-	margin-top: 20px;
+	margin-bottom: 20px;
 	border: 1px solid #CCCCCC;
 	box-shadow: 0 0 5px #CCCCCC inset;
 	border-radius: 5px;
 	padding: 10px;
+}
+
+.forma input:focus, .forma textarea:focus {
+	outline: none;
 }
 
 .forma button {
@@ -122,7 +126,9 @@ a:HOVER {
 	font-weight: bold;
 }
 
-
+#menu{
+    overflow: hidden;
+}
 #menu a {
 	margin: 10px;
 }
@@ -130,4 +136,24 @@ a:HOVER {
 #menu a.active {
 	font-weight: bold;
 	color: #999999;
+}
+
+#userpanel {
+    float: right;
+}
+
+.forma .title {
+    margin-bottom: 10px;
+}
+
+.forma .buttons a {
+    display: block;
+    margin-top: -20px;
+}
+
+input:focus:required:invalid {
+  background-color: rgb(255, 231, 219);
+}
+input:required:valid {
+  background-color: #fff;
 }

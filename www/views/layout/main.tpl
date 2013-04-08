@@ -7,10 +7,11 @@
 </head>
 <body>
 	<div id="wrapper">
-		<?php $this->viewMenu(); ?>
-		<p id="warning"><?php echo $this->get('warning'); ?></p>
+
+		<?php $this->viewMenu();?>
+		<p id="warning"><?php echo nl2br($this->get('warning')); ?></p>
 		
-		<?php  $this->viewContent();?>
+		<?php echo $this->content;?>
 
 	</div>
 </body>
